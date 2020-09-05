@@ -15,7 +15,7 @@ const Recommendations = memo(() => {
     return (
         <div>
         hello
-            {categories ? categories.map((category) => {
+            {categories == null ? categories.map((category) => {
                 return <p>{category}</p>
             }) : <p>No data</p>}
         </div>
