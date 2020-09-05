@@ -1,5 +1,5 @@
 const options = [
-    "WebDev" , "DataScience", "hello"
+    "Web Development" , "Machine Learning", "App Development"
 ]
 
 module.exports = options;
