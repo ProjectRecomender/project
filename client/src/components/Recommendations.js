@@ -4,9 +4,8 @@ const Recommendations = memo(() => {
     const [categories, setCategories] = useState([])
     useEffect(() => {
        const getResult = async () => {
-       const results = await axios.post(
-        `http://localhost:5000/recommend`
-      
+       const results = await axios.get(
+        `http://localhost:5000/recommend` 
       );
       console.log(results.data);
 
