@@ -1,7 +1,7 @@
 import React ,{ useState, useEffect }from 'react';
 import {
   Card, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  CardTitle
 } from 'reactstrap';
 import axios from 'axios';
 
@@ -16,10 +16,10 @@ const RecommendationCard = ({field}) => {
       setrepos([...results.data.items])
     };
     getResult();
-  }, []);
+  },);
 
   var repositories = repos.slice(0,3).map((repo) => {
-             return <div><p><a href={repo.html_url} target="_blank"> {repo.name}</a></p></div> 
+             return <div><p><a href={repo.html_url} target="_blank" rel="noopener noreferrer"> {repo.name}</a></p></div> 
          })
     return (
          <Card>

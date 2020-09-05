@@ -8,10 +8,7 @@ export default class Select extends React.Component {
       questions: [
         { query: 'You have an eye for design' },
         { query: 'You have attention to detail ' },
-        {
-          query:
-            'You like to identify new ways to improve a company or project',
-        },
+        { query: 'You like to identify new ways to improve a company or project',},
         { query: 'You like to analyze data' },
         { query: 'You like to see or discover patterns' },
         { query: 'You like to manage projects ' },
@@ -26,7 +23,7 @@ export default class Select extends React.Component {
     if (answered.includes(query)) {
       this.setState({
         answered: answered.filter((e) => {
-          return e != query
+          return e !== query
         }),
       })
     } else {
