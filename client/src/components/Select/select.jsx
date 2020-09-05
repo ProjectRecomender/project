@@ -82,7 +82,7 @@ export default class Select extends React.Component {
                       name={idx}
                       id="option1"
                       autocomplete="off"
-                      onChange={() => this.handleChange(question.id, 1)}
+                      onChange={() => this.handleChange(question.id, 0.999999)}
                     />{' '}
                     Agree
                   </label>
@@ -102,7 +102,7 @@ export default class Select extends React.Component {
                       name={idx}
                       id="option3"
                       autocomplete="off"
-                      onChange={() => this.handleChange(question.id, 0)}
+                      onChange={() => this.handleChange(question.id, 0.000001)}
                     />{' '}
                     Disagree
                   </label>
