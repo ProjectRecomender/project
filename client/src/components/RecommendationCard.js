@@ -9,14 +9,12 @@ const RecommendationCard = ({field}) => {
     const [repos, setrepos] = useState([])
     useEffect(() => {
        const getResult = async () => {
-                  console.log("s")
-
        const results = await axios.get(`https://api.github.com/search/repositories?q=topic:${field}`);
       console.log(results.data);
       setrepos([...results.data.items])
     };
     getResult();
-  },);
+  },[field],);
 
   var repositories = repos.slice(0,3).map((repo) => {
              return <div><p><a href={repo.html_url} target="_blank" rel="noopener noreferrer"> {repo.name}</a></p></div> 
