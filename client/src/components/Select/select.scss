@@ -1,0 +1,14 @@
+.qnBox:nth-child(odd) {
+  background-color: Lightgray;
+  .qnBox-cb {
+    background-color: white;
+  }
+}
+.qnBox-cb:nth-child(even) {
+  background-color: lightgray;
+}
+
+.qnBox-cb {
+  max-height: 1.5em;
+  max-width: 2.5em;
+}
