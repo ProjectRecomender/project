@@ -1,11 +1,11 @@
 import React, { memo,useState, useEffect } from 'react';
-import axios from "axios";
+import api from "../utils/api"
 const Recommendations = memo(() => {
     const [categories, setCategories] = useState([])
     useEffect(() => {
        const getResult = async () => {
-       const results = await axios.get(
-        `http://localhost:5000/recommend` 
+       const results = await api.get(
+        `/recommend` 
       );
       console.log(results.data);
 
