@@ -4,10 +4,8 @@ const Recommendations = memo(() => {
     const [categories, setCategories] = useState([])
     useEffect(() => {
        const getResult = async () => {
-       const results = await api.get(
-        `/recommend` 
-      );
-      console.log(results.data);
+       const results = await api.get('/recommend');
+      // console.log(results.data);
 
       setCategories([...results.data]);
     };
@@ -17,9 +15,9 @@ const Recommendations = memo(() => {
     return (
         <div>
         hello
-            {categories.map((category) => {
+            {categories ? categories.map((category) => {
                 return <p>{category}</p>
-            })}
+            }) : <p>No data</p>}
         </div>
     );
 });
