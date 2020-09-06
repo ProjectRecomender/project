@@ -1,7 +1,7 @@
 import React ,{ useState, useEffect }from 'react';
 import {
   Card, CardText, CardBody,
-  CardTitle
+  CardTitle, Button
 } from 'reactstrap';
 import axios from 'axios';
 
@@ -17,13 +17,13 @@ const RecommendationCard = ({field}) => {
   },[field],);
 
   var repositories = repos.slice(0,3).map((repo) => {
-             return <div><p><a href={repo.html_url} target="_blank" rel="noopener noreferrer"> {repo.name}</a></p></div> 
+             return <div class="repoButton"><a href={repo.html_url} target="_blank" rel="noopener noreferrer"><Button color="success" outline block> {repo.name}</Button> </a></div>
          })
     return (
-         <Card>
-         <CardTitle>
+         <Card className = "recommendationCard">
+         <h2>
             {field}
-         </CardTitle>
+         </h2>
        
          <CardText>
          To start you off here are some sample repositories

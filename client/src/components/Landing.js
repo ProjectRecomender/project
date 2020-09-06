@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <div className="container">
       <h2>HELLO!!!</h2>
-      <div>
+      <div class="form">
         <Link to={'/select'}>Select Page</Link>
       </div>
     </div>

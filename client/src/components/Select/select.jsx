@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import db from '../../firebase.js'
-import './select.scss'
+import {Button} from "reactstrap";
 
 export default class Select extends React.Component {
   constructor(props) {
@@ -69,7 +69,7 @@ export default class Select extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2>Select</h2>
+        <h1>Select</h1>
         {this.state.questions.map((question, idx) => {
           return (
             <div className="qnBox row pt-2 pb-2 border" key={idx}>
@@ -82,7 +82,7 @@ export default class Select extends React.Component {
                       name={idx}
                       id="option1"
                       autocomplete="off"
-                      onChange={() => this.handleChange(question.id, 0.999999)}
+                      onChange={() => this.handleChange(question.id, 0.99)}
                     />{' '}
                     Agree
                   </label>
@@ -102,7 +102,7 @@ export default class Select extends React.Component {
                       name={idx}
                       id="option3"
                       autocomplete="off"
-                      onChange={() => this.handleChange(question.id, 0.000001)}
+                      onChange={() => this.handleChange(question.id, 0.01)}
                     />{' '}
                     Disagree
                   </label>
@@ -113,16 +113,12 @@ export default class Select extends React.Component {
         })}
 
         {/* SUBMIT */}
-        <button
-          type="button"
-          class="btn btn-success"
+        <Button success outline 
           onClick={() => this.handleSubmit()}
         >
-          Go!
-        </button>
-        <footer>
-          <Link to={'/recommend'}>Recommendations Page</Link>
-        </footer>
+           <Link to={'/recommend'}>Go</Link>
+        </Button>
+      
       </div>
     )
   }
