@@ -10,17 +10,26 @@ export default class Select extends React.Component {
     super(props)
     this.state = {
       questions: [
-        { id: 0, query: 'You have an eye for design' },
-        { id: 1, query: 'You have attention to detail' },
+        { id: 0, query: 'You have an eye for interacting with machines' },
+        { id: 1, query: 'You are fascinated by what mobile phones can do' },
         {
           id: 2,
-          query:
-            'You like to identify new ways to improve a company or project',
+          query: 'You love to browse websites and think how they function',
         },
-        { id: 3, query: 'You like to analyze data' },
-        { id: 4, query: 'You like to see or discover patterns' },
-        { id: 5, query: 'You like to manage projects ' },
-        { id: 6, query: 'You like to lead' },
+        { id: 3, query: 'You keep thinking about puzzles and solving them' },
+        { id: 4, query: 'You want to make machines do your work' },
+        { id: 5, query: 'You like to see or discover patterns' },
+        {
+          id: 6,
+          query:
+            'Tinkering around the internet to see how it works is second nature to you',
+        },
+        { id: 7, query: 'You are fascinated by serverless technology' },
+        {
+          id: 8,
+          query: 'Everything can be connected to everything else is your motto',
+        },
+        { id: 9, query: 'You want your computer to automate all your tasks' },
       ],
       answered: [],
     }

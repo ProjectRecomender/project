@@ -21,11 +21,11 @@ class Recommendations extends React.Component {
     super(props)
     this.state = {
       cmap: [
-        { category: 'Virtual Reality' },
+        { category: 'Machine Learning' },
         { category: 'App dev' },
         { category: 'Web Dev' },
         { category: 'Game Development' },
-        { category: 'Machine Learning' },
+        { category: 'VR' },
         { category: 'Data Science' },
         { category: 'Web security' },
         { category: 'Cloud computing' },
