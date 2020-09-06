@@ -4,6 +4,7 @@ import db from '../../firebase.js'
 import { Button } from 'reactstrap'
 import Waves from '../waves'
 
+import './select.scss'
 export default class Select extends React.Component {
   constructor(props) {
     super(props)
