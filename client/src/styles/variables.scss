@@ -1,2 +1,24 @@
 $background-color: rgb(16, 16, 20);
 $primary-color: #1da5aa;
+
+
+@font-face {
+  font-family: "pt_sansbold";
+  src: url("./fonts/ptsans-bold-webfont.woff2") format("woff2"),
+    url("./fonts/ptsans-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "pt_sansregular";
+  src: url("./fonts/ptsans-regular-webfont.woff2") format("woff2"),
+    url("./fonts/ptsans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+$font-text: "pt_sansregular", "sans-serif";
+$heading-text: "pt_sansbold", "sans-serif";

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import db from '../../firebase.js'
 import {Button} from "reactstrap";
+import Waves from "../waves";
 
 export default class Select extends React.Component {
   constructor(props) {
@@ -68,15 +69,16 @@ export default class Select extends React.Component {
 
   render() {
     return (
+      <>
       <div className="container">
-        <h1>Select</h1>
+        <h1>Find your Tech !</h1>
         {this.state.questions.map((question, idx) => {
           return (
             <div className="qnBox row pt-2 pb-2 border" key={idx}>
-              <div className="col-6 ">{question.query}</div>
+              <div className="col-6 onset-1 " style={{ "textAlign" : "left"}}>{question.query}</div>
               <div className="col-6 qnBox-cb">
                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-secondary">
+                  <label class="btn btn-success outline">
                     <input
                       type="radio"
                       name={idx}
@@ -86,7 +88,7 @@ export default class Select extends React.Component {
                     />{' '}
                     Agree
                   </label>
-                  <label class="btn btn-secondary">
+                  <label class="btn btn-dark">
                     <input
                       type="radio"
                       name={idx}
@@ -96,7 +98,7 @@ export default class Select extends React.Component {
                     />{' '}
                     Neutral
                   </label>
-                  <label class="btn btn-secondary">
+                  <label class="btn btn-danger">
                     <input
                       type="radio"
                       name={idx}
@@ -113,13 +115,16 @@ export default class Select extends React.Component {
         })}
 
         {/* SUBMIT */}
-        <Button success outline 
+        <div className="submitButton">   <Button outline color="success"
           onClick={() => this.handleSubmit()}
         >
-           <Link to={'/recommend'}>Go</Link>
-        </Button>
-      
+           Let's Go !
+        </Button></div>
+     
       </div>
+            <Waves/>
+            </>
+
     )
   }
 }
