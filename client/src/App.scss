@@ -1,54 +1,56 @@
-@import "./styles/variables.scss";
-@import "./styles/recommendationPage.scss";
-@import "./styles/form.scss";
-
+@import './styles/variables.scss';
+@import './styles/recommendationPage.scss';
+@import './styles/form.scss';
 
 * {
-    background-color: $background-color;
-    color: $primary-color;
-    text-align: center;
-    overflow-x: hidden;
-    font-family: $font-text;
+  background-color: $background-color;
+  color: $primary-color;
+  text-align: center;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color:$primary-color;
-    background-color: transparent;
+a {
+  text-decoration: none;
+  color: $primary-color;
+  background-color: transparent;
 }
 
-a:hover{
-    background-color: transparent;
-    color:$background-color;
+a:hover {
+  background-color: transparent;
+  color: $background-color;
 }
 
-.repoButton{
- text-align:center;
- padding:0.5rem
+.repoButton {
+  text-align: center;
+  padding: 0.5rem;
 }
 
-Button:hover{
-    color:$background-color !important;
+Button:hover {
+  color: $background-color !important;
 }
-h1{
-    padding:1rem;
-    margin-top: 1rem
+h1 {
+  padding: 1rem;
+  margin-top: 1rem;
 }
-p,h2{
-    margin-bottom:  0;
-}
-
-h1,h2,h3{
-    font-family: $heading-text;
+p,
+h2 {
+  margin-bottom: 0;
 }
 
- /* Hide scrollbar for Chrome, Safari and Opera */
+h1,
+h2,
+h3 {
+  font-family: $heading-text;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
 *::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 * {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-} 
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
