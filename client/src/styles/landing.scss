@@ -1,0 +1,61 @@
+.octopus{
+    width:80%;
+    height: 100%;
+}
+
+.landing{
+    font-size:larger;
+    background-color: #fff !important;
+    max-height: 100%;
+
+    *{
+background-color: #fff !important;
+    }   
+    color:$background-color !important;
+    h1,h2{
+            color:$background-color !important;
+            
+
+        padding:2rem 3rem;
+    }
+    p{
+        padding: 0 3rem;
+    color:$background-color !important;
+
+    }
+}
+.intro h1,h2,p{
+    text-align: left !important;
+}
+.landing{
+    padding:0 !important;
+    max-width: 100%;
+    overflow-y: hidden;
+    max-height: 100%;
+}
+
+#spin {
+  color:$background-color;
+  font-size:2rem;
+}
+#spin:after {
+  content:"";
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  0% { content:"Augemented Reality"; }
+  10% { content:"Virtual Reality"; }
+  20% { content:"App Development"; }
+  30% { content:"Web Development"; }
+  40% { content:"Game Development"; }
+  50% { content: "Data Science"; }
+  60% { content: "Cyber Security"; }
+  70% { content: "Cloud Computing"; }
+  80% { content: "Competitive Coding"; }
+  90% { content: "Internet of Things"; }
+}
+
+.home-btn{
+    font-size: larger;
+    padding:3rem
+}
