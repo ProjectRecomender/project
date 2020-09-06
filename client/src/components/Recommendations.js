@@ -3,7 +3,7 @@ import RecommendationCard from './RecommendationCard'
 import { render } from '@testing-library/react'
 import db from '../firebase'
 import { Spinner } from 'reactstrap'
-import Waves from "./waves"
+import Waves from './waves'
 
 class Recommendations extends React.Component {
   // const [categories, setCategories] = useState([])
@@ -35,21 +35,29 @@ class Recommendations extends React.Component {
   }
   componentDidMount() {
     const { categories, cmap, count } = this.state
-    db.collection('data')
-      .doc('responses')
-      .onSnapshot((doc) => {
-        console.log(doc.data())
-
-        // if data can be a list of classes we can do a doc.data().map here.
-        this.setState(
-          {
-            categories: [...categories, cmap[doc.data().class].category],
-            count: count + 1,
-          },
-          () => console.log(categories)
-        )
-      })
+    this.setState({ categories: [] }, () => {
+      db.collection('data')
+        .doc('responses')
+        .onSnapshot((doc) => {
+          console.log(doc.data().classes)
+          var temp = doc.data().classes
+          // if data can be a list of classes we can do a doc.data().map here.
+          temp.forEach((clas) => {
+            this.setState(
+              (prevState) => ({
+                categories: [
+                  ...prevState.categories,
+                  cmap[Number(clas)].category,
+                ],
+                count: count + 1,
+              }),
+              () => console.log(categories)
+            )
+          })
+        })
+    })
   }
+
   render() {
     const { categories, count } = this.state
     const timer = setTimeout(() => this.setState({ count: count + 1 }), 3000)
@@ -62,9 +70,9 @@ class Recommendations extends React.Component {
       return (
         <div className="recommendation">
           <h3>Loading your recommendations...</h3>
-          <Spinner/>
+          <Spinner />
           {}
-          <Waves/>
+          <Waves />
         </div>
       )
     } else {
@@ -81,7 +89,7 @@ class Recommendations extends React.Component {
                 )
               })}
           </div>
-            <Waves/>
+          <Waves />
         </div>
       )
     }
